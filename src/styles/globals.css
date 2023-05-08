@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply max-w-screen overflow-x-hidden overscroll-y-none !scroll-smooth;
+  }
+
+  body {
+    @apply font-secondary-regular text-stone-600 antialiased bg-white;
+    text-rendering: optimizeLegibility;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border p-0 m-0;
+  }
+
+  *:focus {
+    @apply outline-none;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-stone-950;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-secondary-bold tracking-tight;
+  }
+
+  h1 {
+    @apply font-primary-bold text-6xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  /* Primary Font - Aristotelica */
+
+  @font-face {
+    font-family: Primary Light;
+    src: url(../../public/fonts/aristotelica/light.ttf);
+  }
+
+  @font-face {
+    font-family: Primary Regular;
+    src: url(../../public/fonts/aristotelica/regular.ttf);
+  }
+
+  @font-face {
+    font-family: Primary Bold;
+    src: url(../../public/fonts/aristotelica/bold.ttf);
+  }
+
+  /* Secondary Font - Proxima Soft */
+
+  @font-face {
+    font-family: Secondary Light;
+    src: url(../../public/fonts/proxima-soft/light.ttf);
+  }
+
+  @font-face {
+    font-family: Secondary Regular;
+    src: url(../../public/fonts/proxima-soft/regular.ttf);
+  }
+
+  /* Secondary Font - Proxima Nova */
+
+  @font-face {
+    font-family: Secondary Bold;
+    src: url(../../public/fonts/proxima-nova/semibold.otf);
+  }
+}
