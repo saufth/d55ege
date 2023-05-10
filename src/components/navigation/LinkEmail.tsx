@@ -2,6 +2,7 @@
 import Link from './core/Link'
 // Config
 import { email } from '@/modules/app/config'
+import { SIZES } from '@/modules/sizing/config'
 // Types
 import type { Themeable } from '@/types/theme'
 
@@ -16,7 +17,7 @@ const mailto = `mailto:${email}`
  */
 export default function LinkEmail ({ theme }: Themeable) {
   return (
-    <Link href={mailto} theme={theme} underline>
+    <Link href={mailto} theme={theme} size={SIZES.lg} underline>
       {email}
     </Link>
   )

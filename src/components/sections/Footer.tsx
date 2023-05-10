@@ -17,8 +17,8 @@ import { THEMES } from '@/modules/theme/config'
 export default function Footer () {
   return (
     <footer className='max-w-8xl mx-auto bg-sky-900'>
-      <div className='w-full px-5% py-16 mx-auto grid md:grid-cols-3 place-content-center gap-y-8'>
-        <div className='grid md:block place-content-center'>
+      <div className='w-full px-5% py-16 mx-auto grid lg:grid-cols-3 place-content-center gap-y-8'>
+        <div className='grid lg:block place-content-center'>
           <NextLink href='/'>
             <Image
               src='/images/logomark-white.svg'
@@ -30,23 +30,23 @@ export default function Footer () {
           </NextLink>
         </div>
         <nav>
-          <ul className='w-full flex flex-col md:flex-row gap-4 text-center'>
+          <ul className='w-full flex flex-col lg:flex-row gap-4 text-center'>
             {NAV_LIST.map((navItem, key) => (
               <li
-                className='last:hidden last:md:block'
+                className='last:hidden last:lg:block'
                 key={key}
               >
-                <Link href={navItem.href} size={SIZES.sm} theme={THEMES.secondary}>
+                <Link href={navItem.href} theme={THEMES.secondary}>
                   {navItem.children}
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
-        <div className='md:text-xl text-center md:text-right'>
+        <div className='text-center lg:text-right'>
           <LinkEmail theme={THEMES.secondary} />
         </div>
-        <div className='md:hidden grid place-content-center'>
+        <div className='lg:hidden grid place-content-center'>
           <LinkToAction />
         </div>
       </div>

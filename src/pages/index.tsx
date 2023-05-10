@@ -35,12 +35,10 @@ export default function HomePage () {
       <section className='h-3xl md:h-2xl relative overflow-hidden'>
         <div className='max-w-8xl h-full px-5% pt-28 mx-auto space-y-8 bg-black/30'>
           <div className='md:max-w-2xl mt-16 md:mt-24 space-y-5 md:space-y-7'>
-            <div className='grid md:block place-content-center'>
-              <Tagline size='lg'>
-                {slogan}
-              </Tagline>
-            </div>
-            <div className='space-y-5 text-center md:text-left'>
+            <Tagline size='lg'>
+              {slogan}
+            </Tagline>
+            <div className='space-y-5'>
               <h1 className='text-white'>
                 {description}
               </h1>
@@ -49,7 +47,7 @@ export default function HomePage () {
               </p>
             </div>
           </div>
-          <div className='flex flex-col sm:flex-row items-center md:items-start gap-y-5 sm:gap-x-5'>
+          <div className='flex flex-col sm:flex-row gap-y-5 sm:gap-x-5'>
             <LinkToAction />
             <LinkToServices />
           </div>
@@ -111,7 +109,7 @@ export default function HomePage () {
         </div>
 
         <div className='px-5% md:px-0 mt-24 space-y-16 md:space-y-36'>
-          <div className='font-primary-light text-3xl md:text-4.5xl text-center'>
+          <div className='font-primary-light text-3xl md:text-4.5xl md:text-center'>
             Soluciones integrales a la medida
           </div>
           <ul className='space-y-24 lg:space-y-44'>
@@ -135,7 +133,7 @@ export default function HomePage () {
       </section>
 
       <section className='px-5% lg:px-3%'>
-        <div className='max-w-4xl pb-24 mx-auto text-center space-y-7 md:space-y-8'>
+        <div className='max-w-4xl px-5% py-12 md:pb-24 mx-auto md:text-center space-y-7 md:space-y-8 border-t md:border-t-0 border-t-stone-300'>
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
             Soñamos con un mundo en el que las empresas no solo sean rentables, sino que también
@@ -145,27 +143,29 @@ export default function HomePage () {
           </p>
         </div>
 
-        {VALUES_NAMES.map((value, key) => (
-          <article key={key} className='py-12 lg:py-0 flex flex-col lg:flex-row justify-start lg:items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
-            <div className='w-24 lg:w-64 lg:h-64'>
-              <Image
-                src={`${sectionsImgPath}${value}.svg`}
-                alt={value}
-                className='w-full lg:p-20'
-                width={250}
-                height={250}
-              />
-            </div>
-            <header className='max-w-xl space-y-6'>
-              <h3>
-                {VALUES[value].heading}
-              </h3>
-              <p className='text-lg'>
-                {VALUES[value].description}
-              </p>
-            </header>
-          </article>
-        ))}
+        <div>
+          {VALUES_NAMES.map((value, key) => (
+            <article key={key} className='py-12 lg:py-0 flex flex-col lg:flex-row justify-start lg:items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
+              <div className='w-24 lg:w-64 lg:h-64'>
+                <Image
+                  src={`${sectionsImgPath}${value}.svg`}
+                  alt={value}
+                  className='w-full lg:p-20'
+                  width={250}
+                  height={250}
+                />
+              </div>
+              <header className='max-w-xl space-y-6'>
+                <h3>
+                  {VALUES[value].heading}
+                </h3>
+                <p className='text-lg'>
+                  {VALUES[value].description}
+                </p>
+              </header>
+            </article>
+          ))}
+        </div>
       </section>
     </PageLayout>
   )

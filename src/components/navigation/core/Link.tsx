@@ -12,7 +12,7 @@ import { ThemeStyleConfig } from '@/types/theme'
 const SIZE_STYLES: SizeStyleConfig = {
   sm: 'text-sm',
   md: 'font-secondary-bold text-md',
-  lg: 'font-secondary-bold text-4xl'
+  lg: 'font-secondary-bold md:text-lg'
 }
 
 /** The link theme style configuration */
@@ -42,11 +42,11 @@ export default function Link ({
   const sizeStyle = SIZE_STYLES[size]
   const themeStyle = THEME_STYLES[theme]
   const textStyle = underline ? 'underline' : ''
-  const linkStyle = `hover:text-sky-300 transition-colors ${sizeStyle} ${themeStyle} ${textStyle}`
+  const linkStyle = `${sizeStyle} ${themeStyle} ${textStyle}`
 
   return (
     <NextLink
-      className={linkStyle}
+      className={`hover:text-sky-300 transition-colors ${linkStyle}`}
       href={href}
       target={target}
       rel={rel}
