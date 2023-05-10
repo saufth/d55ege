@@ -27,7 +27,7 @@ export default function Showcase ({ heading, description, image, reverse }: Show
         />
       </div>
 
-      <header className='md:px-11% grid place-content-center gap-y-4'>
+      <header className='md:px-11% text-center lg:text-left grid place-content-center gap-y-4'>
         <h3>
           {heading}
         </h3>

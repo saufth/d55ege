@@ -34,11 +34,13 @@ export default function HomePage () {
     <PageLayout page={PAGE_ROUTES.home}>
       <section className='h-3xl md:h-2xl relative overflow-hidden'>
         <div className='max-w-8xl h-full px-5% pt-28 mx-auto space-y-8 bg-black/30'>
-          <div className='md:max-w-2xl mt-16 md:mt-24 space-y-5 md:space-y-7'>
-            <Tagline size='lg'>
-              {slogan}
-            </Tagline>
-            <div className='space-y-5'>
+          <div className='max-w-2xl mt-16 md:mt-24 grid place-content-center gap-y-5 md:gap-y-7'>
+            <div className='grid md:block place-content-center'>
+              <Tagline size='lg'>
+                {slogan}
+              </Tagline>
+            </div>
+            <div className='text-center md:text-left space-y-5'>
               <h1 className='text-white'>
                 {description}
               </h1>
@@ -47,7 +49,7 @@ export default function HomePage () {
               </p>
             </div>
           </div>
-          <div className='flex flex-col sm:flex-row gap-y-5 sm:gap-x-5'>
+          <div className='grid md:flex place-content-center md:place-content-start gap-y-5 md:gap-y-0 md:gap-x-5'>
             <LinkToAction />
             <LinkToServices />
           </div>
@@ -93,7 +95,7 @@ export default function HomePage () {
             <div className='w-[112%] h-full absolute top-0 left-0 -z-20 bg-solutions bg-cover bg-top bg-no-repeat' />
           </div>
           <div className='lg:py-24'>
-            <div className='px-11% py-11 lg:p-18 bg-stone-100 space-y-8 lg:space-y-10'>
+            <div className='px-11% py-11 lg:p-18 text-center lg:text-left bg-stone-100 space-y-8 lg:space-y-10'>
               <h2>
                 Nuestras soluciones
               </h2>
@@ -101,7 +103,7 @@ export default function HomePage () {
                 En el mundo empresarial actual, el marketing y la estrategia son elementos críticos
                 para el éxito y la supervivencia de cualquier negocio.
               </p>
-              <div>
+              <div className='grid lg:block place-content-center'>
                 <LinkToAction />
               </div>
             </div>
@@ -109,7 +111,7 @@ export default function HomePage () {
         </div>
 
         <div className='px-5% md:px-0 mt-24 space-y-16 md:space-y-36'>
-          <div className='font-primary-light text-3xl md:text-4.5xl md:text-center'>
+          <div className='font-primary-light text-3xl md:text-4.5xl text-center'>
             Soluciones integrales a la medida
           </div>
           <ul className='space-y-24 lg:space-y-44'>
@@ -133,7 +135,7 @@ export default function HomePage () {
       </section>
 
       <section className='px-5% lg:px-3%'>
-        <div className='max-w-4xl px-5% py-12 md:pb-24 mx-auto md:text-center space-y-7 md:space-y-8 border-t md:border-t-0 border-t-stone-300'>
+        <div className='max-w-4xl px-5% py-12 md:pb-24 mx-auto text-center space-y-7 md:space-y-8 border-t md:border-t-0 border-t-stone-300'>
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
             Soñamos con un mundo en el que las empresas no solo sean rentables, sino que también
@@ -145,17 +147,19 @@ export default function HomePage () {
 
         <div>
           {VALUES_NAMES.map((value, key) => (
-            <article key={key} className='py-12 lg:py-0 flex flex-col lg:flex-row justify-start lg:items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
-              <div className='w-24 lg:w-64 lg:h-64'>
-                <Image
-                  src={`${sectionsImgPath}${value}.svg`}
-                  alt={value}
-                  className='w-full lg:p-20'
-                  width={250}
-                  height={250}
-                />
+            <article key={key} className='py-12 lg:py-0 flex flex-col lg:flex-row items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
+              <div className='grid lg:block place-content-center'>
+                <div className='w-24 lg:w-64 lg:h-64'>
+                  <Image
+                    src={`${sectionsImgPath}${value}.svg`}
+                    alt={value}
+                    className='w-full lg:p-20'
+                    width={250}
+                    height={250}
+                  />
+                </div>
               </div>
-              <header className='max-w-xl space-y-6'>
+              <header className='max-w-xl text-center lg:text-left space-y-6'>
                 <h3>
                   {VALUES[value].heading}
                 </h3>
