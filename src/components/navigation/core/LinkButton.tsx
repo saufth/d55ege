@@ -1,7 +1,7 @@
 // Components
 import NextLink from 'next/link'
 // Config
-import { THEME } from '@/modules/theme/config'
+import { THEMES } from '@/modules/theme/config'
 // Types
 import type { LinkButtonProps } from '@/types/navigation'
 // Styles
@@ -15,8 +15,8 @@ import styles from '@/styles/Button.module.css'
  *
  * @default theme 'primary'
  */
-export default function LinkButton ({ children, href, theme = THEME.primary }: LinkButtonProps) {
-  const themeStyle = theme === THEME.secondary ? styles.btn__secondary : styles.btn__primary
+export default function LinkButton ({ children, href, theme = THEMES.primary }: LinkButtonProps) {
+  const themeStyle = theme === THEMES.secondary ? styles.btn__secondary : styles.btn__primary
   const btnStyle = `${styles.btn} ${themeStyle}`
 
   return (

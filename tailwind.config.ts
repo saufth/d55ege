@@ -36,13 +36,12 @@ export default {
     extend: {
       fontFamily: {
         // Primary - Aristotelica
-        'primary-light': ['Primary Regular', 'sans serif'],
+        'primary-light': ['Primary Light', 'sans serif'],
         'primary-regular': ['Primary Regular', 'sans serif'],
         'primary-bold': ['Primary Bold', 'sans serif'],
         // Secondary - Proxima Soft
-        'secondary-light': ['Secondary Regular', 'sans serif'],
+        'secondary-light': ['Secondary Light', 'sans serif'],
         'secondary-regular': ['Secondary Regular', 'sans serif'],
-        // Secondary - Proxima Nova
         'secondary-bold': ['Secondary Bold', 'sans serif']
       },
       colors: {
@@ -54,6 +53,7 @@ export default {
         ...sizingConfig.defaults
       },
       maxWidth: {
+        '1/2': '50%',
         screen: '100vw',
         ...sizingConfig.breakpoints
       },
@@ -62,7 +62,9 @@ export default {
         ...sizingConfig.defaults
       },
       padding: {
+        '3%': '3%',
         '5%': '5%',
+        '11%': '11%',
         ...sizingConfig.defaults
       },
       margin: {
@@ -74,15 +76,10 @@ export default {
       },
       fontSize: {
         md: ['0.938rem', { lineHeight: '1.375rem' }], // 15px
-        '4.5xl': ['2.5rem', { lineHeight: '1rem' }] // 40px
+        '4.5xl': ['2.5rem', { lineHeight: '2.5rem' }] // 40px
       },
       backgroundImage: {
-        hero: "url('/images/sections/hero-bg.jpg')",
-        'hero-sm': "url('/images/sections/hero-bg-sm.jpg')",
-        hero2: "url('/images/sections/hero2-bg.jpg')",
-        'hero2-sm': "url('/images/sections/hero2-bg-sm.jpg')",
-        hero3: "url('/images/sections/hero3-bg.jpg')",
-        'hero3-sm': "url('/images/sections/hero3-bg-sm.jpg')"
+        solutions: 'url(/images/sections/solutions.jpg)'
       },
       animation: {
         'tansition-1-3': 'tansition-1-3 20s infinite ease',

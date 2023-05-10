@@ -20,7 +20,7 @@ const SIZE_STYLES: SizeStyleConfig = {
  * @default size 'md'
  */
 export default function Tagline ({ children, size = SIZES.md }: TaglineProps) {
-  const taglineSTyle = `px-3 pt-2 pb-1.5 text-stone-100 inline-block leading-none bg-secondary/60 rounded-full backdrop-filter backdrop-blur-sm ${SIZE_STYLES[size]}`
+  const taglineSTyle = `px-3 pt-2 pb-1.5 text-white inline-block leading-none border border-white rounded-full backdrop-filter backdrop-blur-sm ${SIZE_STYLES[size]}`
   return (
     <div className={taglineSTyle}>
       {children}

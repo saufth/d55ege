@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { baseUrl, organizationSlogan } from '@/modules/app/config'
 
 /** Google seach scheme */
-const googleSearchSchema = {
+const SEARCH_SCHEME = {
   '@context': 'https://schema.org/',
   '@graph': [
     {
@@ -44,7 +44,7 @@ const googleSearchSchema = {
  */
 const addWebsiteJsonId = () => {
   return {
-    __html: JSON.stringify(googleSearchSchema)
+    __html: JSON.stringify(SEARCH_SCHEME)
   }
 }
 

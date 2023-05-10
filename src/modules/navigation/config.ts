@@ -55,8 +55,8 @@ export const NAV: NavConfig = {
 /** The navigation list configuration */
 export const NAV_LIST: ReadonlyArray<Navigable> = Object.values(NAV)
 
-/** The link to action properties */
-export const linkToAction = NAV.contact
-
 /** The aria label for navigation directories */
 export const navAriaLabel = `${organizationSlogan} directorio`
+
+/** The path of the section images */
+export const sectionsImgPath = '/images/sections/'

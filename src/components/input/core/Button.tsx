@@ -1,6 +1,6 @@
 // Config
 import { BUTTON_TYPES } from '@/modules/input/config'
-import { THEME } from '@/modules/theme/config'
+import { THEMES } from '@/modules/theme/config'
 // Types
 import type { ButtonProps } from '@/types/input'
 // Styles
@@ -19,10 +19,10 @@ export default function Button ({
   children,
   action,
   type = BUTTON_TYPES.button,
-  theme = THEME.primary,
+  theme = THEMES.primary,
   disabled
 }: ButtonProps) {
-  const themeStyle = theme === THEME.primary ? styles.btn__primary : styles.btn__secondary
+  const themeStyle = theme === THEMES.secondary ? styles.btn__secondary : styles.btn__primary
   const btnStyle = `${styles.btn} ${themeStyle}`
 
   return (

@@ -2,21 +2,21 @@
 import NextLink from 'next/link'
 // Config
 import { SIZES } from '@/modules/sizing/config'
-import { THEME } from '@/modules/theme/config'
+import { THEMES } from '@/modules/theme/config'
 // Types
 import type { LinkProps } from '@/types/navigation'
 import { SizeStyleConfig } from '@/types/sizing'
 import { ThemeStyleConfig } from '@/types/theme'
 
 /** The link size style configuration */
-const linkSizeStyles: SizeStyleConfig = {
+const SIZE_STYLES: SizeStyleConfig = {
   sm: 'text-sm',
-  md: 'font-secondary-light',
+  md: 'font-secondary-bold text-md',
   lg: 'font-secondary-bold text-4xl'
 }
 
 /** The link theme style configuration */
-const linkThemeStyles: ThemeStyleConfig = {
+const THEME_STYLES: ThemeStyleConfig = {
   primary: 'text-stone-950',
   secondary: 'text-white'
 }
@@ -36,13 +36,13 @@ export default function Link ({
   target,
   rel,
   size = SIZES.md,
-  theme = THEME.primary,
+  theme = THEMES.primary,
   underline
 }: LinkProps) {
-  const sizeStyle = linkSizeStyles[size]
-  const themeStyle = linkThemeStyles[theme]
+  const sizeStyle = SIZE_STYLES[size]
+  const themeStyle = THEME_STYLES[theme]
   const textStyle = underline ? 'underline' : ''
-  const linkStyle = `hover:text-primary transition-colors ${sizeStyle} ${themeStyle} ${textStyle}`
+  const linkStyle = `hover:text-sky-300 transition-colors ${sizeStyle} ${themeStyle} ${textStyle}`
 
   return (
     <NextLink

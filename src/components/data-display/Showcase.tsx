@@ -1,5 +1,7 @@
 // Components
 import Image from 'next/image'
+// Config
+import { sectionsImgPath } from '@/modules/navigation/config'
 // Types
 import type { ShowcaseProps } from '@/types/data-dislay'
 
@@ -10,33 +12,27 @@ import type { ShowcaseProps } from '@/types/data-dislay'
  * @returns The Showcase component
  */
 export default function Showcase ({ heading, description, image, reverse }: ShowcaseProps) {
-  const containerReverseStyle = reverse ? 'md:flex-row-reverse' : ''
-  const imageSrc = `/images/sections/${image.name}`
+  const imgWrapReverseStyle = reverse ? 'md:order-last' : ''
+  const imageSrc = `${sectionsImgPath}${image.name}`
 
   return (
-    <article className={`h-auto md:h-sm flex flex-col-reverse md:flex-row md:gap-x-20 gap-y-8 md:gap-y-0 ${containerReverseStyle}`}>
-      <div className='w-full md:w-1/2 h-auto md:h-full'>
-        <div className='w-full h-full flex flex-col md:justify-center gap-y-4'>
-          <header className='space-y-3 text-center md:text-left'>
-            <h3 className='text-primary pb-6 border-b border-b-stone-300'>
-              {heading.toUpperCase()}
-            </h3>
-            {description ? <p className='text-base text-stone-500'>{description}</p> : null}
-          </header>
-        </div>
+    <article className='md:h-sm grid md:grid-cols-2 gap-y-8 md:gap-y-0'>
+      <div className={`overflow-hidden ${imgWrapReverseStyle}`}>
+        <Image
+          src={imageSrc}
+          alt={image.alt}
+          className='w-full'
+          width={image.width}
+          height={image.height}
+        />
       </div>
 
-      <div className='w-full md:w-1/2 h-auto md:h-full'>
-        <div className='w-full'>
-          <Image
-            src={imageSrc}
-            alt={image.alt}
-            className='w-full h-auto rounded-sm'
-            width={image.width}
-            height={image.height}
-          />
-        </div>
-      </div>
+      <header className='md:px-11% grid place-content-center gap-y-4'>
+        <h3>
+          {heading}
+        </h3>
+        {description ? <p className='md:text-lg'>{description}</p> : null}
+      </header>
     </article>
   )
 }

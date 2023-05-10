@@ -1,7 +1,6 @@
 // Components
 import Button from '@/components/input/core/Button'
 import PageLayout from '@/components/layout/PageLayout'
-import Tagline from '@/components/data-display/core/Tagline'
 // React
 import { useRef, FormEvent, useState } from 'react'
 // Services
@@ -62,12 +61,12 @@ export default function ContactPage () {
       <section className='max-w-4xl px-5% my-32 mx-auto'>
         <div className='px-5% space-y-12'>
           <div className='space-y-3'>
-            <Tagline>
+            <p>
               ¿Tomamos un café?
-            </Tagline>
-            <h1 className='text-5xl md:text-6xl'>
+            </p>
+            <h2>
               Pongamosnos en contacto
-            </h1>
+            </h2>
           </div>
           <form
             className='space-y-8'

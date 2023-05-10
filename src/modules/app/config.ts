@@ -47,7 +47,7 @@ export const SERVICES: HeaderListConfig = {
     heading: 'Consultoría en ventas',
     description: 'Acompañamos los procesos y estrategias de comercialización de una empresa para identificar oportunidades de mejora maximizando la eficiencia y rentabilidad de la fuerza de ventas.'
   },
-  investigation: {
+  analysis: {
     heading: 'Investigación y análisis de datos',
     description: 'Recopilamos, analizamos y evaluamos datos relevantes para una empresa, incluyendo la evaluación de rendimiento y la identificación de áreas de oportunidad.'
   }

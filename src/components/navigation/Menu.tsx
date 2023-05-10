@@ -11,10 +11,25 @@ import { OC_STATE } from '@/modules/input/config'
 import { SIZES } from '@/modules/sizing/config'
 // Types
 import type { MenuProps } from '@/types/navigation'
-import type { OCState } from '@/types/input'
+import type { OCVariantsConfig } from '@/types/animation'
+
+/** Menu animation variants */
+const MENU_VARIANTS: OCVariantsConfig = {
+  open: {
+    opacity: 1,
+    height: '100vh',
+    transition: {
+      delay: 0.3
+    }
+  },
+  closed: {
+    opacity: 0,
+    height: 0
+  }
+}
 
 /** Background animation variants */
-const backgroundVariants: Record<OCState, any> = {
+const BG_VARIANTS: OCVariantsConfig = {
   open: (width = 1366) => ({
     clipPath: `circle(${width * 2}px at 100% 0px)`,
     opacity: 1,
@@ -36,21 +51,6 @@ const backgroundVariants: Record<OCState, any> = {
   }
 }
 
-/** Nav animation variants */
-const navVariants: Record<OCState, any> = {
-  open: {
-    opacity: 1,
-    height: '100vh',
-    transition: {
-      delay: 0.3
-    }
-  },
-  closed: {
-    opacity: 0,
-    height: 0
-  }
-}
-
 /**
  * The main menu component of the application
  * @returns The Menu component
@@ -68,7 +68,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
       <motion.nav
         aria-label={navAriaLabel}
         className='w-full h-screen pt-24 fixed top-0 left-0 z-60 overflow-hidden grid place-content-center gap-y-6 text-center'
-        variants={navVariants}
+        variants={MENU_VARIANTS}
       >
         <div className='text-sm'>
           Menu
@@ -89,7 +89,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
 
       <motion.div
         className='w-full h-screen fixed top-0 z-50 bg-white'
-        variants={backgroundVariants}
+        variants={BG_VARIANTS}
       />
     </motion.div>
   )

@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply font-secondary-regular text-stone-600 antialiased bg-white;
+    @apply font-secondary-light text-stone-700 antialiased bg-white;
     text-rendering: optimizeLegibility;
   }
 
@@ -32,7 +32,7 @@
   }
 
   h2, h3, h4, h5, h6 {
-    @apply font-secondary-bold tracking-tight;
+    @apply text-stone-700 tracking-tight;
   }
 
   h1 {
@@ -40,11 +40,11 @@
   }
 
   h2 {
-    @apply text-5xl md:text-6xl;
+    @apply text-[32px] leading-none md:text-[44px];
   }
 
   h3 {
-    @apply text-4xl md:text-5xl;
+    @apply font-secondary-regular text-[22px] md:text-3xl;
   }
 
   /* Primary Font - Aristotelica */
@@ -76,10 +76,8 @@
     src: url(../../public/fonts/proxima-soft/regular.ttf);
   }
 
-  /* Secondary Font - Proxima Nova */
-
   @font-face {
     font-family: Secondary Bold;
-    src: url(../../public/fonts/proxima-nova/semibold.otf);
+    src: url(../../public/fonts/proxima-soft/bold.ttf);
   }
 }

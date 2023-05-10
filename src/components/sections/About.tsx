@@ -15,13 +15,13 @@ import type { AboutProps } from '@/types/sections'
  */
 export default function About ({ id, heading, description, tagline, showcases }: AboutProps) {
   /** Showcase names list */
-  const showcaseNameList: ReadonlyArray<string> = Object.keys(showcases)
+  const SHOWCASE_NAMES: ReadonlyArray<string> = Object.keys(showcases)
 
   return (
     <section id={id} className='max-w-8xl px-5% mx-auto py-24 space-y-24'>
       <Header heading={heading} description={description} />
       <ul className='pb-12 md:pb-56 space-y-24 md:space-y-64'>
-        {showcaseNameList.map((showcase, key) => (
+        {SHOWCASE_NAMES.map((showcase, key) => (
           <li key={key}>
             <Showcase
               heading={showcases[showcase].heading}
