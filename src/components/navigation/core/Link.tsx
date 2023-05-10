@@ -5,8 +5,8 @@ import { SIZES } from '@/modules/sizing/config'
 import { THEMES } from '@/modules/theme/config'
 // Types
 import type { LinkProps } from '@/types/navigation'
-import { SizeStyleConfig } from '@/types/sizing'
-import { ThemeStyleConfig } from '@/types/theme'
+import type { SizeStyleConfig } from '@/types/sizing'
+import type { ThemeStyleConfig } from '@/types/theme'
 
 /** The link size style configuration */
 const SIZE_STYLES: SizeStyleConfig = {

@@ -7,7 +7,6 @@ import NextLink from 'next/link'
 // Config
 import { NAV_LIST } from '@/modules/navigation/config'
 import { copyright, organizationSlogan } from '@/modules/app/config'
-import { SIZES } from '@/modules/sizing/config'
 import { THEMES } from '@/modules/theme/config'
 
 /**
