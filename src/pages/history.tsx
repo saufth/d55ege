@@ -8,7 +8,7 @@ export default function HistoryPage () {
   return (
     <PageLayout page={PAGE_ROUTES.history}>
       <section className='px-5%'>
-        <div className='max-w-8xl md:px-5% mx-auto my-32 space-y-6'>
+        <div className='max-w-8xl md:px-5% mx-auto my-32 text-center md:text-left space-y-6'>
           <h2>
             Nuestra Historia
           </h2>

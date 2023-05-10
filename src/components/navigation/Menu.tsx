@@ -67,7 +67,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
     >
       <motion.nav
         aria-label={navAriaLabel}
-        className='w-full h-screen fixed top-0 left-0 z-60 overflow-hidden grid place-content-center gap-y-6 text-center'
+        className='w-full h-screen pt-4 fixed top-0 left-0 z-60 overflow-hidden grid place-content-center gap-y-6 text-center'
         variants={MENU_VARIANTS}
       >
         <div className='text-sm'>

@@ -33,7 +33,7 @@ export default function HomePage () {
   return (
     <PageLayout page={PAGE_ROUTES.home}>
       <section className='h-3xl md:h-2xl relative overflow-hidden'>
-        <div className='max-w-8xl h-full px-5% pt-28 mx-auto space-y-8 bg-black/30'>
+        <div className='max-w-8xl h-full px-5% pt-28 mx-auto space-y-8'>
           <div className='max-w-2xl mt-16 md:mt-24 grid place-content-center gap-y-5 md:gap-y-7'>
             <div className='grid md:block place-content-center'>
               <Tagline size='lg'>
@@ -70,6 +70,7 @@ export default function HomePage () {
           >
             <source src='/video/hero.mp4' type='video/mp4' />
           </video>
+          <div className='absolute inset-0 bg-black/30' />
         </div>
       </section>
 
@@ -147,7 +148,7 @@ export default function HomePage () {
 
         <div>
           {VALUES_NAMES.map((value, key) => (
-            <article key={key} className='py-12 lg:py-0 flex flex-col lg:flex-row items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
+            <article key={key} className='max-w-7xl py-12 lg:py-0 mx-auto flex flex-col lg:flex-row items-center gap-y-6 lg:gap-y-0 border-t border-t-stone-300'>
               <div className='grid lg:block place-content-center'>
                 <div className='w-24 lg:w-64 lg:h-64'>
                   <Image

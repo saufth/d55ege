@@ -15,42 +15,46 @@ import { THEMES } from '@/modules/theme/config'
  */
 export default function Footer () {
   return (
-    <footer className='max-w-8xl mx-auto bg-sky-900'>
-      <div className='w-full px-5% py-16 mx-auto grid lg:grid-cols-3 place-content-center gap-y-8'>
-        <div className='grid lg:block place-content-center'>
-          <NextLink href='/'>
-            <Image
-              src='/images/logomark-white.svg'
-              alt={organizationSlogan}
-              className='w-auto h-9'
-              width={556}
-              height={250}
-            />
-          </NextLink>
-        </div>
-        <nav>
-          <ul className='w-full flex flex-col lg:flex-row gap-4 text-center'>
-            {NAV_LIST.map((navItem, key) => (
-              <li
-                className='last:hidden last:lg:block'
-                key={key}
-              >
-                <Link href={navItem.href} theme={THEMES.secondary}>
-                  {navItem.children}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className='text-center lg:text-right'>
-          <LinkEmail theme={THEMES.secondary} />
-        </div>
-        <div className='lg:hidden grid place-content-center'>
-          <LinkToAction />
+    <footer className='bg-sky-900'>
+      <div className='px-5%'>
+        <div className='max-w-8xl py-16 mx-auto flex flex-col lg:flex-row justify-between gap-y-8'>
+          <div className='lg:w-[232px] grid lg:block place-content-center'>
+            <NextLink href='/'>
+              <Image
+                src='/images/logomark-white.svg'
+                alt={organizationSlogan}
+                className='w-auto h-9'
+                width={556}
+                height={250}
+              />
+            </NextLink>
+          </div>
+          <nav>
+            <ul className='w-full flex flex-col lg:flex-row gap-4 text-center'>
+              {NAV_LIST.map((navItem, key) => (
+                <li
+                  className='last:hidden last:lg:block'
+                  key={key}
+                >
+                  <Link href={navItem.href} theme={THEMES.secondary}>
+                    {navItem.children}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className='lg:w-[232px] text-center lg:text-right'>
+            <LinkEmail theme={THEMES.secondary} />
+          </div>
+          <div className='lg:hidden grid place-content-center'>
+            <LinkToAction />
+          </div>
         </div>
       </div>
-      <div className='px-1 py-4 text-white text-center bg-sky-950'>
-        {copyright}
+      <div className='bg-sky-950'>
+        <div className='max-w-8xl px-1 py-4 mx-auto text-white text-center'>
+          {copyright}
+        </div>
       </div>
     </footer>
   )
