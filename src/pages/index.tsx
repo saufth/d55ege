@@ -135,7 +135,7 @@ export default function HomePage () {
       </section>
 
       <section className='px-5% lg:px-3%'>
-        <div className='max-w-4xl py-24 mx-auto text-center space-y-7 md:space-y-8'>
+        <div className='max-w-4xl pb-24 mx-auto text-center space-y-7 md:space-y-8'>
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
             Soñamos con un mundo en el que las empresas no solo sean rentables, sino que también
