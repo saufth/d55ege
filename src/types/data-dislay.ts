@@ -1,5 +1,6 @@
 // Types
 import type { Parent } from './layout'
+import { PageRoute } from './navigation'
 import type { Dimensionable, SizeProps } from './sizing'
 
 /** Header properties */
@@ -30,6 +31,12 @@ export interface ImageProps extends Dimensionable {
 export interface CardProps extends HeaderProps {
   /** The image properties */
   image: Readonly<ImageProps>
+}
+
+/** The hero component properties */
+export interface HeroProps extends HeaderProps {
+  /** The background image name */
+  image: PageRoute
 }
 
 /** Showcase component props */

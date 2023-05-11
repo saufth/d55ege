@@ -50,6 +50,10 @@ export const SERVICES: HeaderListConfig = {
   analysis: {
     heading: 'Investigación y análisis de datos',
     description: 'Recopilamos, analizamos y evaluamos datos relevantes para una empresa, incluyendo la evaluación de rendimiento y la identificación de áreas de oportunidad.'
+  },
+  management: {
+    heading: 'Desarrollo y gestión de proyectos',
+    description: 'Planificamos y supervisamos la  implementación desde la fase inicial y evaluación de resultados. Nos especializamos en la coordinación de recursos, el manejo de riesgos y la supervisión de todas las fases del proyecto para garantizar su éxito.'
   }
 }
 

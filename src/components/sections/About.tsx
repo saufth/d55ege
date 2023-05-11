@@ -1,5 +1,5 @@
 // Components
-import Header from '../data-display/Header'
+import Header from '../data-display/core/Header'
 import Showcase from '../data-display/Showcase'
 // Config
 import { IMG_EXT } from '@/modules/data-display/config'

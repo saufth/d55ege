@@ -2,7 +2,7 @@
 import type { HeaderProps } from '@/types/data-dislay'
 
 /**
- * A simple header section component
+ * A simple header component
  * @see {@link HeaderProps} for props specification
  * @param HeaderProps The component props
  * @returns The Header component

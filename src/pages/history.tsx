@@ -1,4 +1,5 @@
 // Components
+import Hero from '@/components/data-display/Hero'
 import PageLayout from '@/components/layout/PageLayout'
 // Config
 import { PAGE_ROUTES } from '@/modules/navigation/config'
@@ -7,11 +8,12 @@ import { PAGE_ROUTES } from '@/modules/navigation/config'
 export default function HistoryPage () {
   return (
     <PageLayout page={PAGE_ROUTES.history}>
-      <section className='px-5%'>
-        <div className='max-w-8xl md:px-5% mx-auto my-32 text-center md:text-left space-y-6'>
-          <h2>
-            Nuestra Historia
-          </h2>
+      <section>
+        <Hero
+          heading='Nuestra historia'
+          image={PAGE_ROUTES.history}
+        />
+        <div className='max-w-8xl px-5% md:px-11% mx-auto my-24 text-center md:text-left space-y-6'>
           <p>
             Hace más de una década, un grupo de jóvenes emprendedores se unieron para fundar
             una empresa de consultoría de negocios y marketing llamada D55. Su visión era

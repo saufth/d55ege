@@ -79,7 +79,9 @@ export default {
         '4.5xl': ['2.5rem', { lineHeight: '2.5rem' }] // 40px
       },
       backgroundImage: {
-        solutions: 'url(/images/sections/solutions.jpg)'
+        solutions: 'url(/images/sections/solutions.jpg)',
+        history: 'url(/images/sections/history.jpg)',
+        contact: 'url(/images/sections/contact.jpg)'
       },
       animation: {
         'tansition-1-3': 'tansition-1-3 20s infinite ease',

@@ -8,6 +8,7 @@ import NextLink from 'next/link'
 import { NAV_LIST } from '@/modules/navigation/config'
 import { copyright, organizationSlogan } from '@/modules/app/config'
 import { THEMES } from '@/modules/theme/config'
+import { SIZES } from '@/modules/sizing/config'
 
 /**
  * The footer section of application
@@ -36,7 +37,7 @@ export default function Footer () {
                   className='last:hidden last:lg:block'
                   key={key}
                 >
-                  <Link href={navItem.href} theme={THEMES.secondary}>
+                  <Link href={navItem.href} theme={THEMES.secondary} size={SIZES.sm}>
                     {navItem.children}
                   </Link>
                 </li>

@@ -10,7 +10,7 @@ import type { ThemeStyleConfig } from '@/types/theme'
 
 /** The link size style configuration */
 const SIZE_STYLES: SizeStyleConfig = {
-  sm: 'text-md',
+  sm: 'text-sm',
   md: 'text-lg',
   lg: 'text-4xl'
 }

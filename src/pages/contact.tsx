@@ -1,5 +1,6 @@
 // Components
 import Button from '@/components/input/core/Button'
+import Hero from '@/components/data-display/Hero'
 import PageLayout from '@/components/layout/PageLayout'
 // React
 import { useRef, FormEvent, useState } from 'react'
@@ -7,6 +8,7 @@ import { useRef, FormEvent, useState } from 'react'
 import emailjs from '@emailjs/browser'
 // Config
 import { PAGE_ROUTES } from '@/modules/navigation/config'
+import { THEMES } from '@/modules/theme/config'
 
 /**
 * The contact section of application
@@ -58,16 +60,13 @@ export default function ContactPage () {
 
   return (
     <PageLayout page={PAGE_ROUTES.contact}>
-      <section className='max-w-4xl px-5% my-32 mx-auto'>
-        <div className='px-5% space-y-12'>
-          <div className='space-y-3'>
-            <p>
-              ¿Tomamos un café?
-            </p>
-            <h2>
-              Pongamosnos en contacto
-            </h2>
-          </div>
+      <section>
+        <Hero
+          heading='Pongamosnos en contacto'
+          tagline='¿Tomamos un café?'
+          image={PAGE_ROUTES.contact}
+        />
+        <div className='max-w-4xl px-5% my-24 mx-auto space-y-12'>
           <form
             className='space-y-8'
             onSubmit={sendEmail}
@@ -75,7 +74,7 @@ export default function ContactPage () {
           >
             <div>
               <input
-                className='w-full px-4 py-3 bg-stone-200 rounded-sm resize-none'
+                className='w-full px-4 py-3 border-b border-b-stone-300 resize-none'
                 type='text'
                 name='contact_name'
                 id='contact_name'
@@ -85,7 +84,7 @@ export default function ContactPage () {
             </div>
             <div>
               <input
-                className='w-full px-4 py-3 bg-stone-200 rounded-sm resize-none'
+                className='w-full px-4 py-3 border-b border-b-stone-300 resize-none'
                 type='email'
                 name='contact_email'
                 id='contact_email'
@@ -95,7 +94,7 @@ export default function ContactPage () {
             </div>
             <div>
               <textarea
-                className='w-full px-4 py-3 bg-stone-200 rounded-sm resize-none'
+                className='w-full px-4 py-3 border-b border-b-stone-300 resize-none'
                 name='contact_description'
                 id='contact_description'
                 rows={1}
@@ -105,7 +104,7 @@ export default function ContactPage () {
               />
             </div>
             <div className='pt-6 flex justify-center'>
-              <Button type='submit' disabled={isSendButtonDisabled}>
+              <Button type='submit' theme={THEMES.secondary} disabled={isSendButtonDisabled}>
                 Enviar
               </Button>
             </div>
