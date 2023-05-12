@@ -20,7 +20,7 @@ export const slogan = 'Excelencia & Genio Emepresarial'
 export const organizationSlogan = `${organization} ${slogan}`
 
 /** The head desciption of the application */
-export const description = 'Consultoría de negocios y marketing'
+export const description = 'Las empresas que desarrollen estrategias de diferenciación y de alto valor agregado alrededor de sus clientes, seran las que logren distinguirse.'
 
 /** The email of the organizacion */
 export const email = `contacto@${domain}`

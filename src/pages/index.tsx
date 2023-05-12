@@ -3,6 +3,7 @@ import Image from 'next/image'
 import LinkToAction from '@/components/navigation/LinkToAction'
 import LinkToServices from '@/components/navigation/LinkToServices'
 import PageLayout from '@/components/layout/PageLayout'
+import Showcase from '@/components/data-display/Showcase'
 import Tagline from '@/components/data-display/core/Tagline'
 // Config
 import { IMG_EXT } from '@/modules/data-display/config'
@@ -16,7 +17,6 @@ import {
 } from '@/modules/app/config'
 // Types
 import type { MouseEvent } from 'react'
-import Showcase from '@/components/data-display/Showcase'
 
 /**
 * The Home page of the application
@@ -42,10 +42,10 @@ export default function HomePage () {
             </div>
             <div className='text-center md:text-left space-y-5'>
               <h1 className='text-white'>
-                {description}
+                Consultoría de negocios y marketing
               </h1>
               <p className='font-primary-bold text-lg md:text-xl text-stone-100'>
-                Lorem ipsum dolor sit amet, ipsul dolorem amet ipsum lorem
+                {description}
               </p>
             </div>
           </div>
