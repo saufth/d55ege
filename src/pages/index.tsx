@@ -151,10 +151,8 @@ export default function HomePage () {
         <div className='max-w-4xl px-5% py-12 md:pb-24 mx-auto text-center space-y-7 md:space-y-8 border-t md:border-t-0 border-t-stone-300'>
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
-            Soñamos con un mundo en el que las empresas no solo sean rentables, sino que también
-            inspiren y marquen una diferencia positiva en nuestro entorno. Queremos ser parte de
-            la generación de ideas innovadoras y proyectos emprendedores que transformen la forma
-            en que hacemos negocios y generen un impacto duradero en nuestra sociedad.
+            Nuestros valores centrales marcan la diferencia entre lo normal y lo que denominamos genio
+            empresarial. Es lo que determina nuestro ADN y es el camino orienta nuestros esfuerzos
           </p>
         </div>
 
