@@ -82,10 +82,22 @@ export default function HomePage () {
           width={556}
           height={250}
         />
+        <div className='text-lg'>
+          Misión
+        </div>
         <p className='max-w-5xl font-secondary-light text-xl md:text-[27px] text-center md:leading-normal'>
           Alcanzar la excelencia y potenciar el genio empresarial de nuestros clientes,
           a través de consultorías personalizadas en negocios y marketing que les permitan
           alcanzar sus objetivos y brillar en su mercado.
+        </p>
+        <div className='text-lg'>
+          Visión
+        </div>
+        <p className='max-w-5xl font-secondary-light text-xl md:text-[27px] text-center md:leading-normal'>
+          Soñamos con un mundo en el que las empresas no solo sean rentables, sino que también
+          inspiren y marquen una diferencia positiva en nuestro entorno. Queremos ser parte de
+          la generación de ideas innovadoras y proyectos emprendedores que transformen la forma
+          en que hacemos negocios y generen un impacto duradero en nuestra sociedad.
         </p>
         <LinkToServices />
       </section>
