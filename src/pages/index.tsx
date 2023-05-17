@@ -82,7 +82,7 @@ export default function HomePage () {
           width={556}
           height={250}
         />
-        <div className='text-lg'>
+        <div className='font-secondary-bold text-xl'>
           Misión
         </div>
         <p className='max-w-5xl font-secondary-light text-xl md:text-[27px] text-center md:leading-normal'>
@@ -90,7 +90,7 @@ export default function HomePage () {
           a través de consultorías personalizadas en negocios y marketing que les permitan
           alcanzar sus objetivos y brillar en su mercado.
         </p>
-        <div className='text-lg'>
+        <div className='font-secondary-bold text-xl'>
           Visión
         </div>
         <p className='max-w-5xl font-secondary-light text-xl md:text-[27px] text-center md:leading-normal'>
