@@ -49,7 +49,7 @@ export const SERVICES: HeaderListConfig = {
   },
   analysis: {
     heading: 'Investigación y análisis de datos',
-    description: 'Recopilamos, analizamos y evaluamos datos relevantes para una empresa, incluyendo la evaluación de rendimiento y la identificación de áreas de oportunidad.'
+    description: 'Recopilamos y analizamos datos relevantes para una empresa, incluyendo la evaluación de rendimiento y la identificación de áreas de oportunidad.'
   },
   management: {
     heading: 'Desarrollo y gestión de proyectos',
