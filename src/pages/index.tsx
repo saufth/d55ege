@@ -151,8 +151,9 @@ export default function HomePage () {
         <div className='max-w-4xl px-5% py-12 md:pb-24 mx-auto text-center space-y-7 md:space-y-8 border-t md:border-t-0 border-t-stone-300'>
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
-            Nuestros valores centrales marcan la diferencia entre lo normal y lo que denominamos genio
-            empresarial. Es lo que determina nuestro ADN y es el camino orienta nuestro día a día.
+            Nuestros valores centrales marcan la diferencia entre lo normal y lo que denominamos
+            genio empresarial. Es la esencia de nuestro ADN, lo que orienta nuestro dia a dia y
+            principalmente nuestro trabajo.
           </p>
         </div>
 
