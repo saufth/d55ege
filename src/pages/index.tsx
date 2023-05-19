@@ -152,8 +152,8 @@ export default function HomePage () {
           <h2 className='font-primary-light lg:text-6xl'>Nuestros valores</h2>
           <p className='font-secondary-light lg:text-2xl'>
             Nuestros valores centrales marcan la diferencia entre lo normal y lo que denominamos
-            genio empresarial. Es la esencia de nuestro ADN, lo que orienta nuestro dia a dia y
-            principalmente nuestro trabajo.
+            genio empresarial. Es la esencia de nuestro ADN, lo que orienta nuestro día a día y
+            principalmente, nuestro trabajo.
           </p>
         </div>
 
